@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealDB</title>
+
+    <link
+            href="./style/bootstrap.min.css"
+            rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            🍽 Meal Explorer
+        </a>
+
+        <form class="d-flex" id="searchForm">
+            <input
+                    id="searchInput"
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Пошук страви">
+
+            <button class="btn btn-warning" type="submit">
+                Знайти
+            </button>
+        </form>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h1>Каталог рецептів</h1>
+
+        <p class="lead">
+            Знайди улюблену страву та переглянь рецепт
+        </p>
+
+        <div class="mt-4">
+            <button class="btn btn-success me-2" id="randomBtn">
+                Випадкова страва
+            </button>
+
+            <button class="btn btn-outline-dark" id="favoritesBtn">
+                Обрані рецепти
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="container py-5">
+    <h2 class="mb-4">Категорії</h2>
+
+    <div class="row g-3" id="categoriesRow">
+        <!-- Категорії будуть додаватися через TypeScript -->
+    </div>
+</section>
+
+<!-- Meals -->
+<section class="container pb-5">
+    <h2 class="mb-4" id="mealsTitle">
+        Популярні страви
+    </h2>
+
+    <div class="row g-4" id="mealsRow">
+        <!-- Страви будуть додаватися через TypeScript -->
+    </div>
+</section>
+
+<!-- Modal -->
+<div
+        class="modal fade"
+        id="mealModal"
+        tabindex="-1"
+        aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="mealModalTitle">
+                    Назва страви
+                </h5>
+
+                <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Закрити">
+                </button>
+            </div>
+
+            <div class="modal-body" id="mealModalBody">
+                <!-- Детальна інформація про страву буде тут -->
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="module" src="./dist/main.js"></script>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
